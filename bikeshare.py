@@ -146,8 +146,8 @@ def station_stats(df):
     print('\nThe most popular End station is {} , Count: {}'.format(popular_end_station,popular_end_sation_count))
 
     # Display most frequent combination of start station and end station trip
-    popular_start_end_station = df.groupby(['Start Station' , 'End Station']).size().reset_index(name="Trip Count").sort_values(by='Trip Count',ascending=False).head(1)
-    print('\nThe most popular trip is \n{}'.format(popular_start_end_station.to_string(index=False)))
+    popular_trip = df.groupby(['Start Station' , 'End Station']).size().reset_index(name="Trip Count").sort_values(by='Trip Count',ascending=False).head(1)
+    print('\nThe most popular trip is \n{}'.format(popular_trip.to_string(index=False)))
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
@@ -200,8 +200,15 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-def trip_data(df,city):
-    """Displays statistics on individual trip data."""
+def trip_data_stats(df,city):
+    """
+    Displays statistics on individual trip data.
+
+    Args:
+        df - Pandas DataFrame containing city data filtered by month and day
+        (str) city - name of the city to analyze
+
+    """
     index = 0
     while True:
         restart = input('\nWould you like to see individual trip data? Enter yes or no.\n')
