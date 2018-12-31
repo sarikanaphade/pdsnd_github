@@ -200,7 +200,7 @@ def user_stats(df):
     print("\nThis took %s seconds." % (time.time() - start_time))
     print('-'*40)
 
-def trip_data(df,city):
+def trip_data_stats(df,city):
     """
     Displays statistics on individual trip data.
 
