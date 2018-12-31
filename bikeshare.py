@@ -201,7 +201,14 @@ def user_stats(df):
     print('-'*40)
 
 def trip_data(df,city):
-    """Displays statistics on individual trip data."""
+    """
+    Displays statistics on individual trip data.
+
+    Args:
+        df - Pandas DataFrame containing city data filtered by month and day
+        (str) city - name of the city to analyze
+
+    """
     index = 0
     while True:
         restart = input('\nWould you like to see individual trip data? Enter yes or no.\n')
