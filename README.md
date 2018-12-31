@@ -7,6 +7,7 @@
 In this project we will learn about bike share use in Chicago, New York City, and Washington by computing a variety of descriptive statistics. For example it provides the information like Popular times of travel (i.e., occurs most often in the start time), Popular stations and trip, Trip duration and User information.
 
 ### Software Requirements
+
 The following software requirements apply:
 - Python 3, NumPy, and pandas installed using Anaconda
 - A text editor, like Sublime or Atom. (Optional : In case user wants to view/modify files)
@@ -33,3 +34,9 @@ The following software requirements apply:
     - (If they chose day) Which day - Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, or Sunday?
 
     After filtering the dataset, users will see the statistical result of the data, and choose to start again or exit.
+
+### How To Use
+
+      Open Terminal and switch to bikeshare project directory and Run following command.
+
+      python bikeshare.py
